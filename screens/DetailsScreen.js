@@ -1,13 +1,16 @@
 import React from 'react';
-import {View, Text, StyleSheet} from 'react-native';
+import {View, StyleSheet,Text} from 'react-native';
 
-export default function DetailsScreen() {
-    return (
-      <View style={style.container}>
-        <Text>Details Screen</Text>
-      </View>
+
+const DetailsScreen =() => (
+    
+      
+        <View style={style.container}>
+          <Text>Details Screen</Text>
+        </View>
+      
     );
-  }
+  
   
   const style = StyleSheet.create({
     container: {
@@ -16,3 +19,4 @@ export default function DetailsScreen() {
       justifyContent: 'center',
     },
   });
+  export default DetailsScreen

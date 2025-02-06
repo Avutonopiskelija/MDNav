@@ -1,23 +1,20 @@
-import React,{useLayoutEffect} from 'react';
-import Ionicons from '@expo/vector-icons/Ionicons'
-import {View, Text, StyleSheet} from 'react-native';
+import React from 'react';
+import {View,StyleSheet,Text,Pressable} from 'react-native';
+import { Button } from 'react-native-paper';
 
-export default function HomeScreen({navigation}) {
 
-    useLayoutEffect(() => {
-        navigation.setOptions({
-            headerRight: () => (
-                <Ionicons name="arrow-forward" size={30} onPress={() => navigation.navigate('Details')}/>
-            )
-        })
-    })
+const HomeScreen = ({navigation}) => (
+    
+      <View style={style.container}>
+          <Pressable onPress= {() => navigation.navigate('DetailsScreen')}>
+            <Text>Home screen</Text>
+          </Pressable>
 
-  return (
-    <View style={style.container}>
-      <Text>Home Screen</Text>
-    </View>
-  );
-}
+         
+      </View>
+    
+  )
+
 
 const style = StyleSheet.create({
     container: {
@@ -26,3 +23,5 @@ const style = StyleSheet.create({
       justifyContent: 'center',
     },
   });
+
+  export default HomeScreen
